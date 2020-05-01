@@ -8,8 +8,13 @@ def test_version():
     assert __version__ == '0.1.0'
 
 def test_read_template():
-    file_path = "C:\\Users\\kaananth\\Training\\Python\\labs\\madlib-cli\\madlib_cli\\"
-    assert read_template(file_path) in "I am the {noun}"
+    file_path = "madlib_cli"
+    assert "I am the {noun}" in read_template(file_path)
+
+def text_file_not_found_exception():
+    with pytest.raises(FileNotFoundError):
+        file_path = "madlib_cli"
+        read_template(file_path)
 
 @pytest.mark.parametrize("template_content,expected",[("I am the {noun}",["noun"]),("I am a {adjective} {noun}",["adjective","noun"])])
 def test_find_keywords(template_content,expected):
