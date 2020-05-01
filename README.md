@@ -9,3 +9,6 @@ Once you know what parts of the template need user input, such as Adjective, pro
 With the collected user inputs, populate the template such that each provided input is placed into the correct position within the template.
 After the resulting Madlib has been completed, provide the completed response back to the user in the command line.
 Write the completed template (Example)to a new file on your file system (in the repo).
+
+# Pull request
+https://github.com/Krishnana/madlib_cli/pull/1
